@@ -1,0 +1,9 @@
+== Enable pulseaudio noise cancellation
+
+. append to /etc/pulse/default.pa
+[source,conf]
+load-module module-echo-cancel source_name=noechosource sink_name=noechosink
+
+. reload pulseaudio
+[source,bash]
+pulseaudio -k
